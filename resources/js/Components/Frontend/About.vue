@@ -6,14 +6,8 @@
         <div
             class="container mx-auto"
             v-motion
-            :initial="{
-                opacity: 0,
-                y: 100,
-            }"
-            :visible="{
-                opacity: 1,
-                y: 0,
-            }"
+            :initial="{ opacity: 0, y: 100 }"
+            :visible="{ opacity: 1, y: 0 }"
         >
             <div class="flex flex-col xl:flex-row gap-24">
                 <img
@@ -30,23 +24,23 @@
                         >
                             About me
                         </h2>
-                        <p class="mb-4 text-accent">
-                            Freelance frontend Web developer
-                        </p>
+                        <p class="mb-4 text-accent">Back-end web developer</p>
                         <hr class="mb-8 opacity-90 dark:opacity-5" />
                         <p class="mb-8">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Accusantium harum beatae magnam quae earum,
-                            cumque quo fugit sint? <br />
-                            <br />Excepturi aliquid cumque quidem veritatis
-                            recusandae ducimus inventore enim illo
-                            exercitationem culpa.
+                            As a backend developer, I specialize in building
+                            scalable server-side applications using languages
+                            like PHP. Proficient in frameworks like Laravel, I
+                            craft RESTful APIs and integrate with databases such
+                            as MySQL or MongoDB. Explore my GitHub for examples
+                            of my work and contributions to open-source
+                            projects.
                         </p>
                     </div>
                     <a
-                        href="#contact"
+                        href="http://127.0.0.1:8000/portfolio/Đặng Thái Sơn - CV_PHP_INTERNSHIP.pdf"
+                        download="portfolio"
                         class="btn btn-md bg-accent text-light-tail-100"
-                        >Contact me</a
+                        >My CV</a
                     >
                 </div>
             </div>

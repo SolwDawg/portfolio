@@ -2,22 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\SkillResource;
-use App\Models\Skill;
+use App\Http\Resources\HeroResource;
+use App\Models\Hero_Section;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
-use Illuminate\Support\Facades\Storage;
 
-class SkillController extends Controller
+class HeroController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        $skills = SkillResource::collection(Skill::all());
-        return Inertia::render("Skills/Index", compact("skills"));
+        $skills = HeroResource::collection(Hero_Section::all());
+        return Inertia::render("Hero/Index", compact("skills"));
     }
 
     /**
@@ -37,7 +32,7 @@ class SkillController extends Controller
             'name' => ['required', 'min:3'],
             'image' => ['required', 'image'],
         ]);
-        
+
         if ($request->hasFile('image')) {
             $image = $request->file('image')->store('skills');
             Skill::create([

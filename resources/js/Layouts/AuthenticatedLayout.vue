@@ -58,6 +58,12 @@ const showingNavigationDropdown = ref(false);
                                 >
                                     Projects
                                 </NavLink>
+                                <NavLink
+                                    :href="route('socials.index')"
+                                    :active="route().current('socials.index')"
+                                >
+                                    Socials
+                                </NavLink>
                             </div>
                         </div>
 

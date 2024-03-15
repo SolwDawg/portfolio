@@ -7,7 +7,6 @@ const navigations = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Portfolio", href: "#portfolio" },
-    { name: "Services", href: "#services" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -32,19 +31,12 @@ onMounted(() => {
         <div
             class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
         >
-            <a
-                href="https://flowbite.com/"
-                class="flex items-center space-x-3 rtl:space-x-reverse"
-            >
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img
-                    src="https://flowbite.com/docs/images/logo.svg"
-                    class="h-8"
+                    src="http://127.0.0.1:8000/img/logo-transparent.png"
+                    class="h-10"
                     alt="Flowbite Logo"
                 />
-                <span
-                    class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-                    >Flowbite</span
-                >
             </a>
             <button
                 @click="showMobileMenu = !showMobileMenu"
@@ -87,7 +79,7 @@ onMounted(() => {
                 >
                     <li v-for="(navigation, index) in navigations" :key="index">
                         <a
-                            href="navigation.href"
+                            :href="navigation.href"
                             class="block py-2 px-3 rounded md:p-0 text-light-tail-500 dark:text-dark-navy-100 hover:text-light-tail-100 dark:hover:text-white"
                             aria-current="page"
                         >

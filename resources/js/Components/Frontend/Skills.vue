@@ -18,7 +18,7 @@ defineProps({
                 y: 0,
             }"
         >
-            <div class="grid grid-cols-8 md:grid-flow-col">
+            <div class="grid md:grid-flow-col">
                 <div
                     class="flex items-center justify-center"
                     v-for="skill in skills.data"
